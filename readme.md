@@ -1,7 +1,9 @@
 ## How to use
 In your `_config.ts` file, add these lines:
 ```ts
-import mermaid from "https://deno.land/x/lume_mermaid_plugin/mod.ts";
+import mermaid from "@ooker777/lume-mermaid-plugin/";
+// or
+// import mermaid from "https://deno.land/x/lume_mermaid_plugin/mod.ts";
 
 site.use(mermaid())
 ```
