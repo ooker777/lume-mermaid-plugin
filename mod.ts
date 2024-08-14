@@ -1,5 +1,5 @@
-import type { Page, Data } from "https://deno.land/x/lume@v2.2.4/core/file.ts";
-import type Site from "https://deno.land/x/lume@v2.2.4/core/site.ts";
+import Site, { Plugin } from "lume/core/site.ts";
+import { Data, Page } from "lume/core/file.ts";
 
 function addMermaidScript(page: Page<Data>) {
   const mermaidScript = page.document?.createElement("script") as HTMLScriptElement;
@@ -32,7 +32,7 @@ function processMermaidBlock(mermaidBlocks: HTMLCollectionOf<Element>, page: Pag
  * The rendered Mermaid block will be `<pre class="language-mermaid"><code class="language-mermaid">Actual Mermaid code here</code></pre>`. 
  * We need to decode it and remove the `<code>` tags.
  */
-export default function (): () => Lume.Plugin {
+export default function (): Plugin {
   return (site: Site) => {
     site.process([".html"], (pages) => {
       for (const page of pages) {
