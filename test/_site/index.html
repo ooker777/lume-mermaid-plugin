@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html><head></head><body><h1>Examples</h1>
+<html><head><script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true });</script></head><body><h1>Examples</h1>
 <p>This page contains a collection of examples of diagrams and charts that can be created through mermaid and its myriad applications.</p>
 <p><strong>If you wish to learn how to support mermaid on your webpage, read the <a href="../config/usage.md?id=usage">Beginner's Guide</a>.</strong></p>
 <p><strong>If you wish to learn about mermaid's syntax, Read the <a href="../syntax/flowchart.md?id=flowcharts-basic-syntax">Diagram Syntax</a> section.</strong></p>
 <h2>Basic Pie Chart</h2>
-<pre><code class="language-mermaid">pie title NETFLIX
+<pre class="mermaid">pie title NETFLIX
          "Time spent looking for movie" : 90
          "Time spent watching it" : 10
-</code></pre>
-<pre><code class="language-mermaid">pie title What Voldemort doesn't have?
+</pre>
+<pre class="mermaid">pie title What Voldemort doesn't have?
          "FRIENDS" : 2
          "FAMILY" : 3
          "NOSE" : 45
-</code></pre>
+</pre>
 <h2>Basic sequence diagram</h2>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     Alice -&gt;&gt; Bob: Hello Bob, how are you?
     Bob--&gt;&gt;John: How about you John?
     Bob--x Alice: I am good thanks!
@@ -23,16 +25,16 @@
 
     Bob--&gt;Alice: Checking with John...
     Alice-&gt;John: Yes... John, how are you?
-</code></pre>
+</pre>
 <h2>Basic flowchart</h2>
-<pre><code class="language-mermaid">graph LR
+<pre class="mermaid">graph LR
     A[Square Rect] -- Link text --&gt; B((Circle))
     A --&gt; C(Round Rect)
     B --&gt; D{Rhombus}
     C --&gt; D
-</code></pre>
+</pre>
 <h2>Larger flowchart with some styling</h2>
-<pre><code class="language-mermaid">graph TB
+<pre class="mermaid">graph TB
     sq[Square shape] --&gt; ci((Circle shape))
 
     subgraph A
@@ -53,9 +55,9 @@
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
      class sq,e green
      class di orange
-</code></pre>
+</pre>
 <h2>SequenceDiagram: Loops, alt and opt</h2>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     loop Daily query
         Alice-&gt;&gt;Bob: Hello Bob, how are you?
         alt is sick
@@ -68,9 +70,9 @@
             Bob-&gt;&gt;Alice: Thanks for asking
         end
     end
-</code></pre>
+</pre>
 <h2>SequenceDiagram: Message to self in loop</h2>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     participant Alice
     participant Bob
     Alice-&gt;&gt;John: Hello John, how are you?
@@ -81,9 +83,9 @@
     John--&gt;&gt;Alice: Great!
     John-&gt;&gt;Bob: How about you?
     Bob--&gt;&gt;John: Jolly good!
-</code></pre>
+</pre>
 <h2>Sequence Diagram: Blogging app service communication</h2>
-<pre><code class="language-mermaid">sequenceDiagram
+<pre class="mermaid">sequenceDiagram
     participant web as Web Browser
     participant blog as Blog Service
     participant account as Account Service
@@ -112,9 +114,9 @@
         end
     end
 
-</code></pre>
+</pre>
 <h2>A commit flow diagram.</h2>
-<pre><code class="language-mermaid">gitGraph:
+<pre class="mermaid">gitGraph:
     commit "Ashish"
     branch newbranch
     checkout newbranch
@@ -127,5 +129,5 @@
     commit
     branch b2
     commit
-</code></pre>
-<!--- cspell:ignore Ashish newbranch ---><script type="module">"This page doesn't contain any Mermaid code, so there is no need to inject Mermaid API here"</script></body></html>
+</pre>
+<!--- cspell:ignore Ashish newbranch ---></body></html>
