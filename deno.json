@@ -1,0 +1,8 @@
+{
+  "name": "@ooker777/lume-mermaid-plugin",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.2.4/"
+  }
+}
