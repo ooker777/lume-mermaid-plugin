@@ -1,3 +1,7 @@
+Update: There is a more recent and better configurable plugin for this: https://lume-mermaid.willcraft.software/
+
+---
+
 ## How to use
 In your `_config.ts` file, add these lines:
 ```ts
